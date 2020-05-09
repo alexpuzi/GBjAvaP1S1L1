@@ -35,58 +35,59 @@ public class Lesson1Main {
         final char charVar = 656;
         final boolean booleanVar = false;
         Scanner scanner = new Scanner(System.in);
-        System.out.println("пункт 2: ");
-        System.out.println("переменная byte - " + byteVar);
-        System.out.println("переменная short - " + shortVar);
-        System.out.println("переменная int - " + intVar);
-        System.out.println("переменная double - " + doubleVar);
-        System.out.println("переменная long - " + longVar);
-        System.out.println("переменная String - " + stringVar);
-        System.out.println("переменная char - " + charVar);
-        System.out.println("переменная boolean - " + booleanVar);
-        borderL();
-        System.out.println("пункт 3: ");
-        int a, b, c, d, result;
-        System.out.println("enter num a: ");
-        a = scanner.nextInt();
-        System.out.println("enter num b: ");
-        b = scanner.nextInt();
-        System.out.println("enter num c: ");
-        c = scanner.nextInt();
-        System.out.println("enter num d: ");
-        d = scanner.nextInt();
-        result = ClassForMethods.method1(a, b, c, d);
-        System.out.println("результат работы метода вычисляющий " +
-                "выражение a * (b + (c / d)) ="+ result);
-        borderL();
-        System.out.println("пункт 4: ");
-        System.out.println("enter num 1: ");
-        int num1 = scanner.nextInt();
-        System.out.println("enter num 2: ");
-        int num2 = scanner.nextInt();
-        boolean resultEqual = ClassForMethods.egualceMethod(num1,num2);
-        System.out.println("Logic result ="+resultEqual);
-        borderL();
-        System.out.println("пункт 5: ");
-        System.out.println("enter number: ");
-        int numForEq = scanner.nextInt();
-        ClassForMethods.egualceMethod(numForEq);
-        borderL();
-        System.out.println("пункт 6: ");
-        System.out.println("enter number: ");
-        int numForBool = scanner.nextInt();
-        Boolean result2 = ClassForMethods.egualceMethod2(numForBool);
-        System.out.println("Результат логической операции "+ result2);
-        borderL();
-        System.out.println("пункт 7: ");
-        System.out.println("enter name: ");
-        String name = scanner.next();
-        ClassForMethods.nameMethod7(name);
+//        System.out.println("пункт 2: ");
+//        System.out.println("переменная byte - " + byteVar);
+//        System.out.println("переменная short - " + shortVar);
+//        System.out.println("переменная int - " + intVar);
+//        System.out.println("переменная double - " + doubleVar);
+//        System.out.println("переменная long - " + longVar);
+//        System.out.println("переменная String - " + stringVar);
+//        System.out.println("переменная char - " + charVar);
+//        System.out.println("переменная boolean - " + booleanVar);
+//        borderL();
+//        System.out.println("пункт 3: ");
+//        int a, b, c, d, result;
+//        System.out.println("enter num a: ");
+//        a = scanner.nextInt();
+//        System.out.println("enter num b: ");
+//        b = scanner.nextInt();
+//        System.out.println("enter num c: ");
+//        c = scanner.nextInt();
+//        System.out.println("enter num d: ");
+//        d = scanner.nextInt();
+//        result = ClassForMethods.method1(a, b, c, d);
+//        System.out.println("результат работы метода вычисляющий " +
+//                "выражение a * (b + (c / d)) ="+ result);
+//        borderL();
+//        System.out.println("пункт 4: ");
+//        System.out.println("enter num 1: ");
+//        int num1 = scanner.nextInt();
+//        System.out.println("enter num 2: ");
+//        int num2 = scanner.nextInt();
+//        boolean resultEqual = ClassForMethods.egualceMethod(num1,num2);
+//        System.out.println("Logic result ="+resultEqual);
+//        borderL();
+//        System.out.println("пункт 5: ");
+//        System.out.println("enter number: ");
+//        int numForEq = scanner.nextInt();
+//        ClassForMethods.egualceMethod(numForEq);
+//        borderL();
+//        System.out.println("пункт 6: ");
+//        System.out.println("enter number: ");
+//        int numForBool = scanner.nextInt();
+//        Boolean result2 = ClassForMethods.egualceMethod2(numForBool);
+//        System.out.println("Результат логической операции "+ result2);
+//        borderL();
+//        System.out.println("пункт 7: ");
+//        System.out.println("enter name: ");
+//        String name = scanner.next();
+//        ClassForMethods.nameMethod7(name);
         borderL();
         System.out.println("пункт 8: ");
         System.out.println("определяем является ли год високосным");
         System.out.println("Введите число");
         int yearTest = scanner.nextInt();
+        ClassForMethods.leapYearMethod8(yearTest);
 
     }
     public static void borderL(){
@@ -124,8 +125,11 @@ class ClassForMethods {
     public static void nameMethod7(String name){
         System.out.println("Привет, " +name+ "!");
     }
-//    public static  void leapYearMethod8(int year){
-//        if((year%4)&&(year%100)&&year)
-//    }
+    public static  void leapYearMethod8(int year){
+        if((year%4==0)||(year%400==0)&&(year%100!=0)){
+            System.out.println("год - " +year+" високосный");
+        }
+        else System.out.println("год - " +year+"не високосный");
+    }
 
 }
