@@ -12,25 +12,30 @@ import java.util.Scanner;
 //        проверяющий что их сумма лежит в пределах от 10 до 20(включительно),
 //
 //        если да – вернуть true, в противном случае – false;
-//        5. Написать метод, которому в качестве параметра передается
-//        целое число, метод должен напечатать в консоль положительное ли число передали, или отрицательное; Замечание: ноль считаем положительным числом.
-//        6. Написать метод, которому в качестве параметра передается целое число, метод должен вернуть true, если число отрицательное;
-//        7. Написать метод, которому в качестве параметра передается строка, обозначающая имя, метод должен вывести в консоль сообщение «Привет, указанное_имя!»;
-//        8. * Написать метод, который определяет является ли год високосным, и выводит сообщение в консоль. Каждый 4-й год является високосным, кроме каждого 100-го, при этом каждый 400-й – високосный.
+//        +5. Написать метод, которому в качестве параметра передается
+//        целое число, метод должен напечатать в консоль положительное ли
+//        число передали, или отрицательное;
+//        Замечание: ноль считаем положительным числом.
+//        +6. Написать метод, которому в качестве параметра передается целое число,
+//        метод должен вернуть true, если число отрицательное;
+//        7. Написать метод, которому в качестве параметра передается строка,
+//        обозначающая имя, метод должен вывести в консоль сообщение «Привет, указанное_имя!»;
+//        8. * Написать метод, который определяет является ли год високосным,
+//        и выводит сообщение в консоль. Каждый 4-й год является високосным,
+//        кроме каждого 100-го, при этом каждый 400-й – високосный.
+
 public class Lesson1Main {
     public static void main(String[] args) {
-        byte byteVar = -127;
-        short shortVar = 32767;
-        int intVar = 32312133;
-        double doubleVar = 123123.34343;
-        long longVar = 922337203685475800l;
-        String stringVar = "String Class";
-        char charVar = 6567;
-        boolean booleanVar = false;
+        final byte byteVar = -127;
+        final short shortVar = 32767;
+        final int intVar = 32312133;
+        final double doubleVar = 123123.34343;
+        final long longVar = 922337203685475800l;
+        final String stringVar = "String Class";
+        final char charVar = 656;
+        final boolean booleanVar = false;
         Scanner scanner = new Scanner(System.in);
-
         System.out.println("пункт 2: ");
-
         System.out.println("переменная byte - " + byteVar);
         System.out.println("переменная short - " + shortVar);
         System.out.println("переменная int - " + intVar);
@@ -39,7 +44,7 @@ public class Lesson1Main {
         System.out.println("переменная String - " + stringVar);
         System.out.println("переменная char - " + charVar);
         System.out.println("переменная boolean - " + booleanVar);
-        ClassForMethods.borderL();
+        borderL();
         System.out.println("пункт 3: ");
         int a, b, c, d, result;
         System.out.println("enter num a: ");
@@ -53,7 +58,7 @@ public class Lesson1Main {
         result = ClassForMethods.method1(a, b, c, d);
         System.out.println("результат работы метода вычисляющий " +
                 "выражение a * (b + (c / d)) ="+ result);
-        ClassForMethods.borderL();
+        borderL();
         System.out.println("пункт 4: ");
         System.out.println("enter num 1: ");
         int num1 = scanner.nextInt();
@@ -61,9 +66,34 @@ public class Lesson1Main {
         int num2 = scanner.nextInt();
         boolean resultEqual = ClassForMethods.egualceMethod(num1,num2);
         System.out.println("Logic result ="+resultEqual);
+        borderL();
+        System.out.println("пункт 5: ");
+        System.out.println("enter number: ");
+        int numForEq = scanner.nextInt();
+        ClassForMethods.egualceMethod(numForEq);
+        borderL();
+        System.out.println("пункт 6: ");
+        System.out.println("enter number: ");
+        int numForBool = scanner.nextInt();
+        Boolean result2 = ClassForMethods.egualceMethod2(numForBool);
+        System.out.println("Результат логической операции "+ result2);
+        borderL();
+        System.out.println("пункт 7: ");
+        System.out.println("enter name: ");
+        String name = scanner.next();
+        ClassForMethods.nameMethod7(name);
+        borderL();
+        System.out.println("пункт 8: ");
+        System.out.println("определяем является ли год високосным");
+        System.out.println("Введите число");
+        int yearTest = scanner.nextInt();
 
-
-
+    }
+    public static void borderL(){
+        char a = 169;
+        for(int i = 0; i<=30;i++)
+            System.out.print(a);
+        System.out.println();
     }
 }
 
@@ -75,13 +105,27 @@ class ClassForMethods {
     }
     public static boolean egualceMethod(int a,int b){
         int result = a + b;
-        if((result>20)&&(result<10))
+        if((result<=20)&&(result>=10))
             return true;
         return false;
     }
-    public static void borderL(){
-        char a = 11097;
-        for(int i = 0; i<=10;i++)
-            System.out.print(a);
+
+    public static void egualceMethod(int a){
+        if(a>=0){
+            System.out.println("Число положительное");
+        }
+        else System.out.println("Число отричательное");
     }
+    public static boolean egualceMethod2(int a){
+        if(a<0)
+            return true;
+        else return false;
+    }
+    public static void nameMethod7(String name){
+        System.out.println("Привет, " +name+ "!");
+    }
+//    public static  void leapYearMethod8(int year){
+//        if((year%4)&&(year%100)&&year)
+//    }
+
 }
