@@ -126,10 +126,10 @@ class ClassForMethods {
         System.out.println("Привет, " +name+ "!");
     }
     public static  void leapYearMethod8(int year){
-        if((year%4==0)||(year%400==0)&&(year%100!=0)){
+        if((year%4==0)&&(year%100!=0)||(year%400==0)){
             System.out.println("год - " +year+" високосный");
         }
-        else System.out.println("год - " +year+"не високосный");
+        else System.out.println("год - " +year+" не високосный");
     }
 
 }
