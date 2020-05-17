@@ -39,7 +39,7 @@ public class Lesson2Main {
         doBorderBetweenEx(6);
         doArrayForSixEx();
         doBorderBetweenEx(7);
-        doArrayForSevenEx(2);
+        doArrayForSevenEx(4);
 
     }
 
@@ -169,34 +169,36 @@ public class Lesson2Main {
             }
             return false;
         }
+        return false;
     }
-    public static void doArrayForSevenEx(int n) {
-        int[] arr7 = {1, 2, 3, 4, 6667, 76, 34};
-        for (int i : arr7) {
-            System.out.print(i + " ");
-        }
-        System.out.println("\r\n");
-        if (n > 0) {
-            for (int x = 0; x < n; x++) {
-                int b = arr7[arr7.length - 1];
-                if ((arr7.length - 1) >= 0) {
-                    System.arraycopy(arr7, 0, arr7, 1, arr7.length - 1);
-                    arr7[0] = b;
+        public static void doArrayForSevenEx(int n){
+            int[] arr7 = {1, 2, 3, 4, 6667, 76, 34};
+            for (int i : arr7) {
+                System.out.print(i + " ");
+            }
+            System.out.println("\r\n");
+            if (n > 0) {
+                for (int x = 0; x < n; x++) {
+                    int b = arr7[arr7.length - 1];
+                    if ((arr7.length - 1) >= 0) {
+                        System.arraycopy(arr7, 0, arr7, 1, arr7.length - 1);
+                        arr7[0] = b;
+                        for (int i : arr7) System.out.print(i + " ");
+                        System.out.println();
+                    }
+                }
+            }
+            if (n < 0) {
+                for (int x = 0; x > n; x--) {
+                    int b = arr7[0];
+                    System.arraycopy(arr7, 1, arr7, 0, arr7.length - 1);
+                    arr7[arr7.length - 1] = b;
                     for (int i : arr7) System.out.print(i + " ");
-                    System.out.println();
+                    System.out.print("\r\n");
                 }
             }
         }
-        if (n < 0) {
-            for (int x = 0; x > n; x--) {
-                int b = arr7[0];
-                System.arraycopy(arr7, 1, arr7, 0, arr7.length - 1);
-                arr7[arr7.length - 1] = b;
-                for (int i : arr7) System.out.print(i + " ");
-                System.out.print("\r\n");
-            }
-        }
     }
-}
+
 
 
