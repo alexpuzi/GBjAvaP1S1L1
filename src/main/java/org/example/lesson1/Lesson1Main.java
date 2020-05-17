@@ -131,5 +131,4 @@ class ClassForMethods {
         }
         else System.out.println("год - " +year+" не високосный");
     }
-
 }
