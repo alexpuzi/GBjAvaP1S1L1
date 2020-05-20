@@ -15,7 +15,7 @@ public class MainForLesson3RandomNumberGame {
 
     //рандамайзер для индекса массива
     public static int generateRandomNumberInt(int i) {
-        return (int) (Math.random() * (i) + 1);
+        return (int) (Math.random() * (i));
     }
 
     // в i = будет рандомное число из метода int generateRandomNumberInt(int i), чтобы осуществлять "рамдомность"
