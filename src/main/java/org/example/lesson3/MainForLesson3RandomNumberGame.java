@@ -8,15 +8,17 @@ public class MainForLesson3RandomNumberGame {
         int numberForRandom = wordsAlpha.length;
 
 //        theMethodTakesIntRandomAndPrintsTheWord(wordsAlpha, generateRandomNumberInt(numberForRandom));
-        String o = theMethodTakesIntRandomAndPrintsTheWord(wordsAlpha, generateRandomNumberInt(numberForRandom));
+        String o = theMethodTakesIntRandomAndPrintsTheWord(doArray(), generateRandomNumberInt(numberForRandom));
 //
-    doPlay(playerInput(doArray()),o);
+        doPlay(playerInput(doArray()), o);
     }
-//рандамайзер для индекса массива
+
+    //рандамайзер для индекса массива
     public static int generateRandomNumberInt(int i) {
         return (int) (Math.random() * (i) + 1);
     }
-// в i = будет рандомное число из метода int generateRandomNumberInt(int i), чтобы осуществлять "рамдомность"
+
+    // в i = будет рандомное число из метода int generateRandomNumberInt(int i), чтобы осуществлять "рамдомность"
     public static String theMethodTakesIntRandomAndPrintsTheWord(String[] str, int i) {
         String word = str[i];
         return word;
@@ -26,7 +28,8 @@ public class MainForLesson3RandomNumberGame {
     public boolean equals(Object obj) {
         return super.equals(obj);
     }
-// предлагаем выбрать клиенту слово из списка и возвращаем его слово
+
+    // предлагаем выбрать клиенту слово из списка и возвращаем его слово
     public static String playerInput(String[] words) {
         Scanner scann = new Scanner(System.in);
         System.out.println("Guess the word from the list: ");
@@ -39,19 +42,24 @@ public class MainForLesson3RandomNumberGame {
     }
     // Сравнение слов и вывод сообщения о проигроше или победе , а так же продолжение или не продолжение работы.
 
-    private static void doPlay(String wordFormPlayer, String wordFromArrayRandom){
+    private static void doPlay(String wordFormPlayer, String wordFromArrayRandom) {
         playerInput(doArray());
-        boolean a = wordFormPlayer.equals(wordFromArrayRandom);
-        if(a==true){
+        String randWord = wordFromArrayRandom;
+        boolean a = wordFormPlayer.equals(randWord);
+        if (a == true) {
             System.out.println("You win!!!!!!!!!!!!\nGood buy!!!!!!\n");
             System.exit(0);
-        }else{
+        } else {
             System.out.println("You loose! :(" +
                     "!\n!\n");
+            //проебразую строку в массив символов и выберу первые 2 символа
+            char[] chArrayOfWords = randWord.toCharArray();
+            System.out.println("Word was :" + chArrayOfWords[0] + chArrayOfWords[1] + "************");
             doPlay(wordFormPlayer, wordFromArrayRandom);
         }
     }
-    public static String[] doArray(){
+
+    public static String[] doArray() {
         String[] wordsAlpha = {"apple", "orange", "lemon", "banana",
                 "apricot", "avocado", "broccoli", "carrot",
                 "cherry", "garlic", "grape", "melon",
