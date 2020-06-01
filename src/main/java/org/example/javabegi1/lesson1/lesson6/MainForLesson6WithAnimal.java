@@ -20,69 +20,31 @@ package org.example.javabegi1.lesson1.lesson6;
  */
 public class MainForLesson6WithAnimal {
     public static void main(String[] args) {
-        returnAnimalsAndCompetitions();
+        doCompetition();
     }
+    public static void doCompetition(){
+        Animal cat1 = new Cat("Barsik", 3.33f,400f);
+        Animal cat2 = new Cat("Voltik", 2.98f,350f);
+        Animal cat3 = new Cat("Timoha", 3.67f,400f);
+        Dog dog1 = new Dog("Tuzik", 1.33f,400f,123f);
+        Dog dog2 = new Dog("Lessy", 1.13f,600f,144f);
+        Animal dog3 = new Dog("Polcan", 2.13f,500f,134f);
 
-    //Сравниванием физ. хар-ки животного с препятствием
-    public static void сompareAnimalActions(String nameOfAnimals, String nameOfCompetition, int jumpOrSwimOrRunAnimal, float wallOrLakeOrRoad) {
-        if (jumpOrSwimOrRunAnimal >= wallOrLakeOrRoad) {
-            System.out.println(String.format("%s преодолел припятствие %.3f - %s, резудьтат - %.3f", nameOfAnimals, nameOfCompetition, wallOrLakeOrRoad, jumpOrSwimOrRunAnimal));
-        } else System.out.println(String.format("%s - не преодолел препятствие: %.3f - %s, результат - %.3f", nameOfAnimals, nameOfCompetition, wallOrLakeOrRoad, jumpOrSwimOrRunAnimal));
-    }
-
-    public static float wallCompetition() {
-        Competition wall = new Competition();
-        return wall.WALL;
-    }
-
-    public static int riverCompetition() {
-        Competition river = new Competition();
-        return river.RIVER;
-    }
-
-    public static int roadCompetition() {
-        Competition road = new Competition();
-        return road.ROAD;
-    }
-
-    public static String giveNameOfWall() {
-        Competition wall = new Competition();
-        return wall.COMPETITION_WALL;
-    }
-
-    public static String giveNameOfRiver() {
-        Competition river = new Competition();
-        return river.COMPETITION_RIVER;
-    }
-
-    public static String giveNameOfRoad() {
-        Competition wall = new Competition();
-        return wall.COMPETITION_ROAD;
+        cat1.jump(3.1f);
+        cat2.jump(2.99f);
+        cat3.jump(3.66f);
+        dog1.jump(3.1f);
+        dog2.jump(2.99f);
+        dog3.jump(3.66f);
+        cat1.run(375f);
+        cat2.run(575f);
+        cat3.run(457f);
+        dog1.run(365f);
+        dog2.run(675f);
+        dog3.run(875f);
+        dog1.swim(365f);
+        dog2.swim(675f);
 
     }
-    public  static void returnAnimalsAndCompetitions(){
-        Cat cat0 = new Cat("Volt", 200, 3, 30);
-        Cat cat1 = new Cat("Felix", 300, 2, 0);
-        Cat cat2 = new Cat("Mr. Karapuz", 600, 4, 0);
-        Cat cat3 = new Cat("Barsik", 450, 3, 0);
-        Dog dog0 = new Dog("Polkan", 2, 121, 56);
-        Animal dog1 = new Animal("Sharik", 4, 100, 1000);
-        Dog dog2 = new Dog("Lessi", 3, 121, 56);
-        Animal dog3 = new Dog("Polkan_2", 5, 100, 1000);
-        Animal it = new Animal("IT", 6, 5000, 3000);
-        сompareAnimalActions(cat0.info(), giveNameOfRoad(), cat0.getRun(), roadCompetition());
-        сompareAnimalActions(cat1.info(), giveNameOfRoad(), cat1.getRun(), roadCompetition());
-        сompareAnimalActions(cat2.info(), giveNameOfRoad(), cat2.getRun(), roadCompetition());
-        сompareAnimalActions(cat3.info(), giveNameOfRoad(), cat3.getRun(), roadCompetition());
-//
-//        сompareAnimalActions(cat0.info(), giveNameOfRiver(), cat0.getSwim(), riverCompetition());
-//        сompareAnimalActions(cat1.info(), giveNameOfRiver(), cat1.getSwim(), riverCompetition());
-//        сompareAnimalActions(cat2.info(), giveNameOfRiver(), cat2.getSwim(), riverCompetition());
-//        сompareAnimalActions(cat3.info(), giveNameOfRiver(), cat3.getSwim(), riverCompetition());
 
-//        сompareAnimalActions(cat0.info(), giveNameOfWall(), cat0.getSwim(), wallCompetition());
-//        сompareAnimalActions(cat1.info(), giveNameOfWall(), cat0.getSwim(), wallCompetition());
-//        сompareAnimalActions(cat2.info(), giveNameOfWall(), cat0.getSwim(), (int) wallCompetition());
-//        сompareAnimalActions(cat3.info(), giveNameOfWall(), cat0.getSwim(), (int) wallCompetition());
-    }
 }
