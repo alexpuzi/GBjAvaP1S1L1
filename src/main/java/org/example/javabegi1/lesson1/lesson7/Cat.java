@@ -20,4 +20,7 @@ public class Cat {
     public int doAppetite(){
         return appetite;
     }
+    public boolean setSatiety(boolean n){
+        return satiety = n;
+    }
 }

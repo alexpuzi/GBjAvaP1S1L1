@@ -24,7 +24,7 @@ public class MainForLesson7OnlyCat {
             plate.info();
             cat[i].eat(plate);
             plate.addEatInPlate(cat[i].doAppetite());
-            System.out.println(cat[i].doSatiety(plate.returnFood()));
+            System.out.println(cat[i].setSatiety(cat[i].doSatiety(plate.returnFood())));
         }
     }
 }
