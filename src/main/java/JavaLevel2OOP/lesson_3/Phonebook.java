@@ -1,11 +1,17 @@
 package JavaLevel2OOP.lesson_3;
 
 public class Phonebook {
-    String person;
-    String phone;
+    private String person;
+    private String phone;
     Phonebook(String person, String phone){
         this.person = person;
         this.phone = phone;
+    }
+    public String getPerson(){
+        return person;
+    }
+    public String getPhone(){
+        return phone;
     }
 
 

@@ -30,7 +30,8 @@ public class MainForLesson3OOP {
         phonebook.add(new Phonebook("Petrov", "+798212324556"));
 
         for(Phonebook ph: phonebook){
-            System.out.println(ph.getClass());
+
+            System.out.println(ph.getPerson()+ph.getPhone());
         }
     }
     public static void doExFirst(){
