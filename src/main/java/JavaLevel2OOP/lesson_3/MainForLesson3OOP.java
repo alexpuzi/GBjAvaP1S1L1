@@ -22,7 +22,7 @@ import java.util.*;
 public class MainForLesson3OOP {
     public static void main(String[] args) {
         doExFirst();
-
+        new Phonebook();
     }
     public static void doExFirst(){
         String[] words = new String[]{"Emperor",
