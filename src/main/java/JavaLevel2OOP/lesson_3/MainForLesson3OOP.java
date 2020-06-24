@@ -22,7 +22,16 @@ import java.util.*;
 public class MainForLesson3OOP {
     public static void main(String[] args) {
         doExFirst();
-        new Phonebook();
+//        new Phonebook();
+        List<Phonebook> phonebook = new ArrayList<Phonebook>();
+        phonebook.add(new Phonebook("Ivanov","+79861234567"));
+        phonebook.add(new Phonebook("Petrov", "+79821234567"));
+        phonebook.add(new Phonebook("Sidorov","+79831234521"));
+        phonebook.add(new Phonebook("Petrov", "+798212324556"));
+
+        for(Phonebook ph: phonebook){
+            System.out.println(ph.getClass());
+        }
     }
     public static void doExFirst(){
         String[] words = new String[]{"Emperor",
