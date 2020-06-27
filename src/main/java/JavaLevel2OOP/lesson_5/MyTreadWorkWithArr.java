@@ -54,12 +54,12 @@ public class MyTreadWorkWithArr implements Runnable {
         thread1.start();
         thread2.start();
 
-        try{
-            thread1.join();
-            thread2.join();
-        }catch (InterruptedException e){
-            System.out.println(String.format("Исклбчение в потоках. %s", e.getMessage()));
-        }
+//        try{
+//            thread1.join();
+//            thread2.join();
+//        }catch (InterruptedException e){
+//            System.out.println(String.format("Исклбчение в потоках. %s", e.getMessage()));
+//        }
         long halfEnd = System.currentTimeMillis();
         System.arraycopy(arr1,0,arr,0,h);
         System.arraycopy(arr2,0,arr,h,h);
