@@ -1,8 +1,6 @@
 package JavaLevel3OOP.lesson_1.homeWork;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
 
 /*
 1. Написать метод, который меняет два элемента
@@ -47,29 +45,29 @@ public class MainJava3Lesson1 {
 //        Box<Apple> ap1 = new Box<>(new Apple(),new Apple(),new Apple());
         Box<Orange> or = new Box<>();
         Box<Orange> or1 = new Box<>();
-        Box<Apple> ap = new Box<>();
-        Box<Apple> ap1 = new Box<>();
+//        Box<Apple> ap = new Box<>();
+//        Box<Apple> ap1 = new Box<>();
         System.out.println("Task3");
         System.out.println("'g' - addFruit: ");
         or.addFruit(new Orange(),10);
         or1.addFruit(new Orange(),12);
-        ap.addFruit(new Apple(),8);
-        ap1.addFruit(new Apple(),4);
+//        ap.addFruit(new Apple(),8);
+//        ap1.addFruit(new Apple(),4);
         System.out.println("Box 1: "+or.getWeight());
         System.out.println("Box 2: "+or1.getWeight());
-        System.out.println("Box 3: "+ap.getWeight());
-        System.out.println("Box 4: "+ap1.getWeight());
-        System.out.println("'e' - compare(): ");
-        System.out.println("Box 1 equals box 3: "+or.compare(ap));
-        System.out.println("Box 2 equals box 4: "+or1.compare(ap1));
-        System.out.println("'f' - pourTo(): ");
-        or.pourTo(or1);
-        ap.pourTo(ap1);
-        System.out.println("'d' - getWeight(): ");
-        System.out.println("Box 1: "+or.getWeight());
-        System.out.println("Box 2: "+or1.getWeight());
-        System.out.println("Box 3: "+ap.getWeight());
-        System.out.println("Box 4: "+ap1.getWeight());
+//        System.out.println("Box 3: "+ap.getWeight());
+//        System.out.println("Box 4: "+ap1.getWeight());
+//        System.out.println("'e' - compare(): ");
+//        System.out.println("Box 1 equals box 3: "+or.compare(ap));
+//        System.out.println("Box 2 equals box 4: "+or1.compare(ap1));
+//        System.out.println("'f' - pourTo(): ");
+//        or.pourTo(or1);
+//        ap.pourTo(ap1);
+//        System.out.println("'d' - getWeight(): ");
+//        System.out.println("Box 1: "+or.getWeight());
+//        System.out.println("Box 2: "+or1.getWeight());
+//        System.out.println("Box 3: "+ap.getWeight());
+//        System.out.println("Box 4: "+ap1.getWeight());
 
 
     }
