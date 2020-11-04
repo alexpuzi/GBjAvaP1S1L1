@@ -20,7 +20,7 @@ public class MainForLesson7OnlyCat {
         cat[4] = new Cat("Felix_4", doRandomForEat(), false);
         Plate plate = new Plate(doRandomForEat());
         for (int i = 0; i < cat.length; i++) {
-            System.out.println("/************************\'");
+            System.out.println("** ** ** ** ** ** ** ** ** ** ** **");
             plate.info();
             cat[i].eat(plate);
             plate.addEatInPlate(cat[i].doAppetite());

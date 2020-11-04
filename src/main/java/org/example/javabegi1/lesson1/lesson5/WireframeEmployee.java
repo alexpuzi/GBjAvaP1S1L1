@@ -1,7 +1,4 @@
 package org.example.javabegi1.lesson1.lesson5;
-//* Создать класс "Сотрудник" с полями: ФИО, должность, email, телефон, зарплата, возраст;
-//* Конструктор класса должен заполнять эти поля при создании объекта;
-//* Внутри класса «Сотрудник» написать метод, который выводит информацию об объекте в консоль;
 
 
 public class WireframeEmployee {
@@ -60,16 +57,16 @@ public class WireframeEmployee {
         return theSalary;
     }
 
-    public static void showInfoAboutEmployee(String name, String patronymic,
-                                             String surname, String position,
-                                             String email, int age,
-                                             String phone, int theSalary) {
+    public void showInfoAboutEmployee(String name, String patronymic,
+                                      String surname, String position,
+                                      String email, int age,
+                                      String phone, int theSalary) {
         System.out.println(String.format(" Mr(Ms) -  %s, %s, %s", name, patronymic, surname));
         System.out.println(String.format(" position & salary -  %s, %s $", position, theSalary));
         System.out.println(String.format("age: " + age + "email: " + email + "phone: " + phone));
     }
 
-    public static void showInfoAboutEmployee() {
+    public void showInfoAboutEmployee() {
         String a = " \n";
         System.out.println("name: " + getName() + a + "patronymic: " + getPatronymic() + a +
                 "surname: " + getSurname() + a + "position: " + getPosition() + a +

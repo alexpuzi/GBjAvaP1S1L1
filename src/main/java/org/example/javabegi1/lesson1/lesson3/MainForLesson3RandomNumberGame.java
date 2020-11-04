@@ -1,4 +1,4 @@
-package org.example.lesson3;
+package org.example.javabegi1.lesson1.lesson3;
 
 import java.util.Scanner;
 
@@ -46,15 +46,14 @@ public class MainForLesson3RandomNumberGame {
         playerInput(doArray());
         String randWord = wordFromArrayRandom;
         boolean a = wordFormPlayer.equals(randWord);
-        if (a == true) {
+        if (a) {
             System.out.println("You win!!!!!!!!!!!!\nGood buy!!!!!!\n");
             System.exit(0);
         } else {
             System.out.println("You loose! :(" +
                     "!\n!\n");
             //проебразую строку в массив символов и выберу первые 2 символа
-            char[] chArrayOfWords = randWord.toCharArray();
-            System.out.println("Word was :" + chArrayOfWords[0] + chArrayOfWords[1] + "************");
+        doTwoCharAndShow(randWord);
             doPlay(wordFormPlayer, wordFromArrayRandom);
         }
     }
@@ -68,6 +67,10 @@ public class MainForLesson3RandomNumberGame {
                 "pear", "pepper", "pineapple", "pumpkin",
                 "potato"};
         return wordsAlpha;
+    }
+    public static void doTwoCharAndShow(String randWord){
+        char[] chArrayOfWords = randWord.toCharArray();
+        System.out.println("Word was :" + chArrayOfWords[0] + chArrayOfWords[1] + "************");
     }
 }
 

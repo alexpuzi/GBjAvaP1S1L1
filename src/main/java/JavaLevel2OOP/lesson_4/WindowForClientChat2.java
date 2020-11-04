@@ -88,9 +88,10 @@ public class WindowForClientChat2 extends Frame {
             private JTextArea jta;
             public JButton button;
 
-            public WindowForClientChat2()
+            public WindowForClientChat2()throws HeadlessException
             {
                 setTitle("Panpartizanchat chat");
+
 //                setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
                 setBounds(100, 100, 500, 500);
 

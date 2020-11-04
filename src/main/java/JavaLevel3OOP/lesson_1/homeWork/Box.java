@@ -3,36 +3,34 @@ package JavaLevel3OOP.lesson_1.homeWork;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class Box<T extends Fruit> {
-    private ArrayList<T> box = new ArrayList<>();
-    //    public Box(T...fruits){
-//        box = new ArrayList<>(Arrays.asList(fruits));
-//    }
-    public Box(){
+public class Box<T extends JavaLevel3OOP.lesson_1.homeWork.Fruit> {
+    private ArrayList<T> list;
 
+    public Box(T... arr) {
+        list = new ArrayList<T>(Arrays.asList(arr));
     }
-    //почему нельзя переопределить метод getWeight в этом классе, если он
-    //наследует Fruits?
-    public float getWeight(){
-        float weight = 0.0f;
-//        почему цикл fori подчеркивает length?
-//        for (int i = 0; i < box.length; i++) {}
-        for(T o : box){
-            weight += o.getWeight();
-        }return weight;
+
+    public float getWeight() {
+        if (list.size() == 0) return 0.0f;
+        return list.get(0).getWeight() * list.size();
     }
-    public boolean compare(Box anotherBox) {
-        if(getWeight() == anotherBox.getWeight()) return true;
-        return false;
+
+    public void addFruit(T fruit) {
+        list.add(fruit);
     }
-    public void pourTo(Box <T>anotherBox){
-        anotherBox.box.addAll(box);
-        box.clear();
-    }
-    //еще способ добавить фрукты
-    public void addFruit(T fruit, int amount){
-        for(int i=0;i<amount;i++){
-            box.add(fruit);
+
+    public void addFruit(T... fruit) {
+        for (int i = 0; i <fruit.length; i++) {
+            list.add(fruit[i]);
         }
+    }
+
+    public boolean compare(Box another) {
+        return Math.abs(this.getWeight() - another.getWeight()) < 0.00001;
+    }
+
+    public void transfer(Box<? super T> another) {
+        another.list.addAll(this.list);
+        this.list.clear();
     }
 }

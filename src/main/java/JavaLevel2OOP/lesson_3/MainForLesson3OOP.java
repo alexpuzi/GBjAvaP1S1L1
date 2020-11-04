@@ -33,6 +33,8 @@ public class MainForLesson3OOP {
 
             System.out.println(ph.getPerson()+ph.getPhone());
         }
+        Iterator<Phonebook> iter = phonebook.iterator();
+
     }
     public static void doExFirst(){
         String[] words = new String[]{"Emperor",

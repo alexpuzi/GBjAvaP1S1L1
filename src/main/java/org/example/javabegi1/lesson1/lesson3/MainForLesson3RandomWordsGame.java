@@ -1,7 +1,5 @@
-package org.example.lesson3;
+package org.example.javabegi1.lesson1.lesson3;
 
-import javax.xml.ws.Service;
-import java.util.Random;
 import java.util.Scanner;
 
 public class MainForLesson3RandomWordsGame {

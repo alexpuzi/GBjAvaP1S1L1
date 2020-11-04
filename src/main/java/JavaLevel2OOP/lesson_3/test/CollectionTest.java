@@ -6,10 +6,20 @@ import static org.apache.tapestry5.ioc.internal.util.InternalUtils.size;
 
 public class CollectionTest {
     public static void main(String[] args){
+//        doArrayList();
+//// Классы HashМap,
+//        doHashMap();
+//        doHashSet();
         doArrayList();
-// Классы HashМap,
-        doHashMap();
-        doHashSet();
+
+    }
+    public void doListArrays(){
+        List<Integer> list = new ArrayList<>();
+
+        list.add(2);
+        list.add(3);
+        Integer[] arr = new Integer[list.size()];
+        list.toArray(arr);
 
     }
 

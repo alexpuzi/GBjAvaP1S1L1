@@ -1,9 +1,20 @@
-package JavaLevel3OOP.lesson_1.homeWork;
+package lesson_1.homeWork;
 
 
-    public class Apple extends Fruit {
-        @Override
-        float getWeight() {
+import lesson_1.homeWork.Fruit;
+
+public class Apple extends Fruit {
+    public Apple(float weight) {
+        super(weight);
+    }
+
+    @Override
+    public Fruit newInstance() {
+        return null;
+    }
+
+    @Override
+    public float getWeight() {
             return 1.0f;
         }
     }

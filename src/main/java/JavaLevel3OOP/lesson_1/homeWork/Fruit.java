@@ -1,5 +1,15 @@
-package JavaLevel3OOP.lesson_1.homeWork;
+package lesson_1.homeWork;
 
 public abstract class Fruit {
-    abstract float getWeight();
+    protected float weight;
+
+    public abstract Fruit newInstance();
+
+    public float getWeight() {
+        return weight;
+    }
+
+    public Fruit(float weight) {
+        this.weight = weight;
+    }
 }
