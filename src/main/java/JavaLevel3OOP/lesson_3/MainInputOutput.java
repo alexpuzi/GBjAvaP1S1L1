@@ -16,12 +16,13 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
-import java.util.Scanner;
 
 public class MainInputOutput {
     public static void main(String[] args) {
         try{
-            task();
+//            task();
+//            ex2();
+            task3();
         }catch(IOException e){
             e.printStackTrace();
         }
@@ -48,7 +49,7 @@ public class MainInputOutput {
         arrayList.add(new FileInputStream("1234/3.txt"));
 
         BufferedInputStream inputStream = new BufferedInputStream(new SequenceInputStream(Collections.enumeration(arrayList)));
-        ByteArrayOutputStream outputStream = new ByteArrayOutputStream(new FileOutputStream("out.txt"));
+        BufferedOutputStream outputStream = new BufferedOutputStream(new FileOutputStream("out.txt"));
         int x;
         while ((x = inputStream.read()) != -1) {
             outputStream.write(x);
@@ -62,7 +63,7 @@ public class MainInputOutput {
 
 
     // 3 прочитать данные из книги (с определнной страницы)
-    // RandomAccessFile позволяет прыгать по потоку назад, без переоткрытия файлы
+    // RandomAccessFile зволяет прыгать по потоку назад, без переоткрытия файлы
     public static void task3() throws IOException {
         final int PAGE_SIZE = 1800;
         RandomAccessFile raf = new RandomAccessFile("123/1.txt", "r");
@@ -79,6 +80,5 @@ public class MainInputOutput {
         raf.close();
     }
 
-
-    }
 }
+

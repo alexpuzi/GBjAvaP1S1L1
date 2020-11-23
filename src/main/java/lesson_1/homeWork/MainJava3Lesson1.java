@@ -1,7 +1,4 @@
 package lesson_1.homeWork;
-import JavaLevel3OOP.lesson_1.homeWork.Apple;
-import JavaLevel3OOP.lesson_1.homeWork.Box;
-import JavaLevel3OOP.lesson_1.homeWork.Fruit;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -36,12 +33,12 @@ public class MainJava3Lesson1 {
      //   int[] arr2 = {1,2,3,4,5,6,7,8};
 
         firsMethod(arr1);
-        Box<Fruit> box = new Box<>();
-        Box<Apple> boxa = new Box<>();
-        boxa.addFruit(new Apple());
-        boxa.transfer(box);
+//        Box<Fruit> box = new Box<>();
+//        Box<Apple> boxa = new Box<>();
+//        boxa.addFruit(new Apple());
+//        boxa.transfer(box);
     }
-    }
+//    }
     public static void swap(Object[] arr, int n1, int n2){
 
     }

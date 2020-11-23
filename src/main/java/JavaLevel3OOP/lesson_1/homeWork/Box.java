@@ -1,9 +1,11 @@
 package JavaLevel3OOP.lesson_1.homeWork;
 
+import lesson_1.homeWork.Fruit;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class Box<T extends JavaLevel3OOP.lesson_1.homeWork.Fruit> {
+public class Box<T extends Fruit> {
     private ArrayList<T> list;
 
     public Box(T... arr) {
